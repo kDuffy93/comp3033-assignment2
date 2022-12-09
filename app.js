@@ -36,6 +36,7 @@ app.use("/api/user", userRouter);
 
 
 mongoose
+    .set('strictQuery', true)
     .connect(config.db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((message) => {
         console.log("connected Successfully");
