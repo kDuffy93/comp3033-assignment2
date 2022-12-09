@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const User = require("../../../models/User/user");
-const CustomOrders = require("../../../models/user/customOrders");
-const CustomItems = require("../../../models/user/customItems");
+const CustomOrders = require("../../../models/User/customOrders");
+const CustomItems = require("../../../models/User/customItems");
 
 
 
