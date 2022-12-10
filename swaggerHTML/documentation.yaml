@@ -1,0 +1,281 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: https://assignment2-kyleduffy-comp3033.onrender.com
+paths:
+  /api/user/customOrder/new:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: customItems
+          in: query
+          schema:
+            type: string
+          example: '%5B6393dce16dfaedd0145661d7%5D'
+        - name: userID
+          in: query
+          schema:
+            type: string
+          example: 638fe9b95f91c51a9d7345b1
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+  /api/user/:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: userID
+          in: query
+          schema:
+            type: string
+          example: 638fe9b95f91c51a9d7345b1
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '405':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+  /api/user/customItem:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: itemID
+          in: query
+          schema:
+            type: string
+          example: 6393dce16dfaedd0145661d7
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: itemId
+          in: query
+          schema:
+            type: string
+          example: 6393dce16dfaedd0145661d7
+        - name: businessID
+          in: query
+          schema:
+            type: string
+          example: '6'
+        - name: menuItemID
+          in: query
+          schema:
+            type: string
+          example: '6'
+        - name: customizations
+          in: query
+          schema:
+            type: string
+          example: '%5Bcheese%2C%20double%20bacon%2C%20sub%20sauce%2C%20pickles%5D'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    delete:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: itemID
+          in: query
+          schema:
+            type: string
+          example: 6391191d340123214f8d264c
+        - name: userID
+          in: query
+          schema:
+            type: string
+          example: 638fe9b95f91c51a9d7345b1
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+  /api/user/new:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: role
+          in: query
+          schema:
+            type: string
+          example: admin
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: kyleFromSwaggerHub
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+  /api/user/customOrder:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: orderID
+          in: query
+          schema:
+            type: string
+          example: 6393efefab9f263b02462687
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: orderID
+          in: query
+          schema:
+            type: string
+          example: 6393efefab9f263b02462687
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customItemIds:
+                  type: array
+                  items:
+                    type: string
+            examples:
+              '0':
+                value: "{\n\t\"customItemIds\": [\"[6391191b340123214f8d2644, 63911918340123214f8d2638]\"]\n}"
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    delete:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: orderId
+          in: query
+          schema:
+            type: string
+          example: 6393efefab9f263b02462687
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+  /api/user/customItem/new:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: businessId
+          in: query
+          schema:
+            type: string
+          example: '1'
+        - name: userID
+          in: query
+          schema:
+            type: string
+          example: 6393dc206dfaedd0145661d5
+        - name: menuItemId
+          in: query
+          schema:
+            type: string
+          example: '1'
+        - name: customizations
+          in: query
+          schema:
+            type: string
+          example: lettuce%2C%20pickles%2C%20onions%2C%20tomatoes
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: https://assignment2-kyleduffy-comp3033.onrender.com
+    servers:
+      - url: https://assignment2-kyleduffy-comp3033.onrender.com
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
