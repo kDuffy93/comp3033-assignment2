@@ -6,8 +6,8 @@ var logger = require('morgan');
 const mongoose = require("mongoose");
 const config = require("./config/globals");
 
-/* const passport = require("passport")
-const basicStrategy = require('passport-http').BasicStrategy; */
+const passport = require("passport")
+const basicStrategy = require('passport-http').BasicStrategy;
 
 var indexRouter = require('./routes/index');
 let userRouter = require("./routes/API/user/user");
@@ -23,16 +23,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-/* 
+
 app.use(passport.initialize());
 passport.use(new basicStrategy((username, password, done) => {
-    if(username)
-})); */
+    if (username == "loggedInUser" && password == "theirPassword") {
+        console.log("authenticated");
+        return done(null, username);
+    } else {
+        console.log("not authenticated");
+        return done(null, false);
+    }
+}));
 
 
 
 app.use('/', indexRouter);
-app.use("/api/user", userRouter);
+app.use("/api/user", passport.authenticate('basic', { session: false }), userRouter);
 
 
 mongoose
